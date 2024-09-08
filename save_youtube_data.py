@@ -8,7 +8,7 @@ API_KEY = 'YOUR_YOUTUBE_API_KEY'
 CHANNEL_ID = 'UCMvvMRGp5nthxeogBo6psFg'
 
 # YouTube Data API 的 URL
-url = f'https://www.googleapis.com/youtube/v3/channels?part=statistics&id={CHANNEL_ID}&key={API_KEY}'
+url = f'https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCMvvMRGp5nthxeogBo6psFg&key=AIzaSyCJ1sOE9WBGPRDFf6SwLD9oydflTXVUynM'
 
 def save_json_response_to_file():
     response = requests.get(url)
