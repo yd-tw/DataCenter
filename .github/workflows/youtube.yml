@@ -38,7 +38,7 @@ jobs:
 
     - name: Commit and Push changes
       run: |
-        git add youtube_channel_data.json
+        git add .
         git commit -m "Update YouTube data [skip ci]"
         git push
       env:
