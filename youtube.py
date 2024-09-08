@@ -22,7 +22,7 @@ def fetch_youtube_data(name, id):
         timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         data['timestamp'] = timestamp
 
-        with open(f'youtube/{name}.json', 'w', encoding='utf-8') as json_file:
+        with open(f'{name}.json', 'w', encoding='utf-8') as json_file:
             json.dump(data, json_file, ensure_ascii=False, indent=4)
         print(f"頻道 {name} 的 API 回應檔案已儲存成功: {name}")
     else:
