@@ -1,14 +1,15 @@
+import os
 import requests
 import json
 from datetime import datetime
 
-API_KEY = 'YOUR_YOUTUBE_API_KEY'
+API_KEY = os.getenv('YOUTUBE_API_KEY')
 
 CHANNEL_ID = 'UCMvvMRGp5nthxeogBo6psFg'
 
 url = f'https://www.googleapis.com/youtube/v3/channels?part=statistics&id={CHANNEL_ID}&key={API_KEY}'
 
-def save_json_response_to_file():
+def youtube():
     response = requests.get(url)
     
     if response.status_code == 200:
@@ -24,4 +25,4 @@ def save_json_response_to_file():
         print(f"HTTP 請求失敗，狀態碼: {response.status_code}")
 
 if __name__ == '__main__':
-    save_json_response_to_file()
+    youtube()
