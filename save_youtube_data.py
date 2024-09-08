@@ -5,7 +5,7 @@ import json
 API_KEY = 'YOUR_YOUTUBE_API_KEY'
 
 # 替換為你要查詢的 YouTube 頻道 ID
-CHANNEL_ID = 'YOUR_CHANNEL_ID'
+CHANNEL_ID = 'UCMvvMRGp5nthxeogBo6psFg'
 
 # YouTube Data API 的 URL
 url = f'https://www.googleapis.com/youtube/v3/channels?part=statistics&id={CHANNEL_ID}&key={API_KEY}'
