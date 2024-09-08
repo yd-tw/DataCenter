@@ -5,11 +5,15 @@ from datetime import datetime
 
 API_KEY = os.getenv('YOUTUBE_API_KEY')
 
-CHANNEL_ID = 'UCMvvMRGp5nthxeogBo6psFg'
+CHANNELS = {
+    'playeryd': 'UCMvvMRGp5nthxeogBo6psFg',
+    'codecat-tw': 'UCZg6zXjhK1RT5NDejLcapSA',
+    'YT-bright_moon_fall_night': 'UCovAQCyXar8ra_WC2bLGqIA',
+    '曹哥議題': 'UC5ZtFyy8wjO7TCMWovFd21Q',
+}
 
-url = f'https://www.googleapis.com/youtube/v3/channels?part=statistics&id={CHANNEL_ID}&key={API_KEY}'
-
-def youtube():
+def fetch_youtube_data(name, id):
+    url = f'https://www.googleapis.com/youtube/v3/channels?part=statistics&id={id}&key={API_KEY}'
     response = requests.get(url)
     
     if response.status_code == 200:
@@ -18,11 +22,15 @@ def youtube():
         timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         data['timestamp'] = timestamp
 
-        with open('youtube_data.json', 'w', encoding='utf-8') as json_file:
+        with open(f'youtube/{name}.json', 'w', encoding='utf-8') as json_file:
             json.dump(data, json_file, ensure_ascii=False, indent=4)
-        print("API 回應檔案已儲存成功")
+        print(f"頻道 {name} 的 API 回應檔案已儲存成功: {name}")
     else:
-        print(f"HTTP 請求失敗，狀態碼: {response.status_code}")
+        print(f"頻道 {name} 的 HTTP 請求失敗，狀態碼: {response.status_code}")
+
+def main():
+    for name, id in CHANNELS.items():
+        fetch_youtube_data(name, id)
 
 if __name__ == '__main__':
-    youtube()
+    main()
