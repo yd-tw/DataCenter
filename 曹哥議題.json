@@ -1,6 +1,6 @@
 {
     "kind": "youtube#channelListResponse",
-    "etag": "uE2gFiYtsSHTrOhFYHPGbhGOnO4",
+    "etag": "HkC7K87qZmZkiKDgxYAyrsW933Q",
     "pageInfo": {
         "totalResults": 1,
         "resultsPerPage": 5
@@ -18,5 +18,5 @@
             }
         }
     ],
-    "timestamp": "2024-09-12 18:29:27"
+    "timestamp": "2024-09-13 18:28:16"
 }
