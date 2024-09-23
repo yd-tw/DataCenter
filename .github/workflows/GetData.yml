@@ -27,7 +27,7 @@ jobs:
       env:
         YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
       run: |
-        python youtube.py
+        python main.py
 
     - name: Configure Git
       run: |
