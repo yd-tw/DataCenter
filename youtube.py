@@ -2,10 +2,6 @@ import os
 import requests
 import json
 from datetime import datetime
-from dotenv import load_dotenv
-load_dotenv()
-
-API_KEY = os.getenv('YOUTUBE_API_KEY')
 
 output_dir = 'youtube'
 os.makedirs(output_dir, exist_ok=True)
