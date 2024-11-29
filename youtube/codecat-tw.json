@@ -1,6 +1,6 @@
 {
     "kind": "youtube#channelListResponse",
-    "etag": "ObxJqnqT4Sx2iLsPUjhKqISdrTo",
+    "etag": "CcqcaBlokhALMpByrYZzGFHoHBQ",
     "pageInfo": {
         "totalResults": 1,
         "resultsPerPage": 5
@@ -8,10 +8,10 @@
     "items": [
         {
             "kind": "youtube#channel",
-            "etag": "Qcuf9ivnUeAoDfarkgbBctX66d0",
+            "etag": "6gW49jDStnw4-dhCXAtDSeInnsA",
             "id": "UCZg6zXjhK1RT5NDejLcapSA",
             "statistics": {
-                "viewCount": "1522",
+                "viewCount": "1524",
                 "subscriberCount": "12",
                 "hiddenSubscriberCount": false,
                 "videoCount": "9"
